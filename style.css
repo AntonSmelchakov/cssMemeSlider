@@ -1,0 +1,30 @@
+img {
+    display: none;
+    text-align: center;
+    transition: 1s;
+}
+
+body {
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#slider {
+    order: -1;
+}
+
+.img-box {
+    display: flex;
+    justify-content: center;
+    width: 96vw;
+    padding: 2vw;
+}
+
+.controls:has(#control1:checked)~#slider #image1 {
+    display: inline;
+    background-color: red;
+}
