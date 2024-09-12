@@ -1,7 +1,17 @@
 img {
-    display: none;
     text-align: center;
     transition: 1s;
+    transform: translate();
+    flex: 0 1;
+    min-width: 0px;
+    max-height: 70vh;
+    object-fit: contain;
+    transform: scale(0);
+}
+
+#image1 {
+    transform: scale(1);
+    flex-grow: 1;
 }
 
 body {
@@ -11,20 +21,83 @@ body {
 #container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100vh;
 }
 
 #slider {
     order: -1;
-}
-
-.img-box {
     display: flex;
     justify-content: center;
-    width: 96vw;
-    padding: 2vw;
+    width: 100vw;
+    padding: 0 2%;
+    box-sizing: border-box;
 }
 
-.controls:has(#control1:checked)~#slider #image1 {
-    display: inline;
-    background-color: red;
+.controls {
+    order: 1;
+    display: flex;
+    justify-content: end;
 }
+
+.controls,
+#substring {
+    width: 50vw;
+}
+
+/*.img-box {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}*/
+
+/*Слайдер-кнопки начало*/
+/*1*/
+.controls:has(#control1:checked)~#slider #image1 {
+    transform: scale(1);
+    flex-grow: 1;
+}
+
+.controls:has(#control1:checked)~#slider :not(#image1) {
+    transform: scale(0);
+    flex-grow: 0;
+}
+
+/*2*/
+.controls:has(#control2:checked)~#slider #image2 {
+    transform: scale(1);
+    flex-grow: 1;
+}
+
+.controls:has(#control2:checked)~#slider :not(#image2) {
+    transform: scale(0);
+    flex-grow: 0;
+}
+
+/*3*/
+.controls:has(#control3:checked)~#slider #image3 {
+    transform: scale(1);
+    flex-grow: 1;
+}
+
+.controls:has(#control3:checked)~#slider :not(#image3) {
+    transform: scale(0);
+    flex-grow: 0;
+}
+
+/*4*/
+
+.controls:has(#control4:checked)~#slider #image4 {
+    transform: scale(1);
+    flex-grow: 1;
+}
+
+.controls:has(#control4:checked)~#slider :not(#image4) {
+    transform: scale(0);
+    flex-grow: 0;
+}
+
+/*Слайдер-кнопки конец*/
+
+/*Текст-кнопки начало*/
+/*Текст-кнопки конец*/
