@@ -38,6 +38,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     height: 100vh;
+    gap: 10px 0;
 }
 
 #slider {
@@ -60,20 +61,24 @@ body {
     height: 15px;
     width: 15px;
     border-radius: 50%;
-    border-color: black;
+    border: 2px solid black;
     background-color: gray;
+    transition: 0.5s;
 }
 
 .controls label input:hover {
-    appearance: ;
     border: 6px red;
     background-color: red;
+    cursor: pointer;
 }
 
+.controls label input:active {
+    transform: scale(2);
+}
 
 .controls,
 #substring {
-    width: 46vw;
+    width: 30vw;
     padding: 0 2vw;
     display: flex;
 }
@@ -175,3 +180,20 @@ body {
 }
 
 /*Текст-кнопки конец*/
+@media (width <=500px) {
+    #container {
+        flex-direction: column;
+        justify-content: unset;
+        flex-wrap: nowrap;
+    }
+
+    .controls,
+    #substring {
+        width: unset;
+    }
+
+    .controls {
+        order: 0;
+        align-self: center;
+    }
+}
