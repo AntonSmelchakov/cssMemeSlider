@@ -1,17 +1,32 @@
 img {
     text-align: center;
     transition: 1s;
-    transform: translate();
     flex: 0 1;
-    min-width: 0px;
+    min-width: 0;
     max-height: 70vh;
     object-fit: contain;
     transform: scale(0);
 }
 
+p {
+    transform: scalex(0);
+    transition: 1s;
+    flex: 1 1;
+    min-width: 0;
+}
+
 #image1 {
     transform: scale(1);
     flex-grow: 1;
+}
+
+#text1 {
+    transform: scale(1);
+    flex-grow: 1;
+}
+
+#control1 {
+    decoration:
 }
 
 body {
@@ -40,9 +55,27 @@ body {
     justify-content: end;
 }
 
+.controls input {
+    appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border-color: black;
+    background-color: gray;
+}
+
+.controls label input:hover {
+    appearance: ;
+    border: 6px red;
+    background-color: red;
+}
+
+
 .controls,
 #substring {
-    width: 50vw;
+    width: 46vw;
+    padding: 0 2vw;
+    display: flex;
 }
 
 /*.img-box {
@@ -100,4 +133,45 @@ body {
 /*Слайдер-кнопки конец*/
 
 /*Текст-кнопки начало*/
+
+.controls:has(#control1:checked)~#substring #text1 {
+    transform: scalex(1);
+    flex-grow: 1;
+}
+
+.controls:has(#control1:checked)~#substring :not(#text1) {
+    transform: scalex(0);
+    flex-grow: 0;
+}
+
+.controls:has(#control2:checked)~#substring #text2 {
+    transform: scalex(1);
+    flex-grow: 1;
+}
+
+.controls:has(#control2:checked)~#substring :not(#text2) {
+    transform: scalex(0);
+    flex-grow: 0;
+}
+
+.controls:has(#control3:checked)~#substring #text3 {
+    transform: scalex(1);
+    flex-grow: 1;
+}
+
+.controls:has(#control3:checked)~#substring :not(#text3) {
+    transform: scalex(0);
+    flex-grow: 0;
+}
+
+.controls:has(#control4:checked)~#substring #text4 {
+    transform: scalex(1);
+    flex-grow: 1;
+}
+
+.controls:has(#control4:checked)~#substring :not(#text4) {
+    transform: scalex(0);
+    flex-grow: 0;
+}
+
 /*Текст-кнопки конец*/
